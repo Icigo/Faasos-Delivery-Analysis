@@ -227,6 +227,3 @@ GROUP BY driver_id;
 SELECT driver_id, CONCAT(CAST(100.0 * SUM(CASE WHEN cancellation IS NULL THEN 1 ELSE 0 END) / COUNT(*) AS INT), ' %') AS successful_percent
 FROM driver_order
 GROUP BY driver_id;
-
-
-
